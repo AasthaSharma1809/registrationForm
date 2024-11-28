@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dob = htmlspecialchars($_POST['dob']);
     $gender = htmlspecialchars($_POST['gender']);
 
-    echo "<h2>Registration Successful!</h2>";
     echo "<p><strong>Name:</strong> $name</p>";
     echo "<p><strong>Email:</strong> $email</p>";
     echo "<p><strong>Phone:</strong> $phone</p>";
