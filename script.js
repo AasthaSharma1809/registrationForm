@@ -7,9 +7,14 @@ $(document).ready(function() {
       url: 'process.php',
       data: $(this).serialize(),
       success: function(response) {
-        $('#result').html(response).fadeIn();
+        $('#resultData').html(response);
+        $('#resultModal').fadeIn();
         $('#registrationForm')[0].reset(); // Clear the form
       }
     });
+  });
+
+  $('.close').click(function() {
+    $('#resultModal').fadeOut();
   });
 });
