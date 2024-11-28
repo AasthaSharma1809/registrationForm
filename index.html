@@ -3,38 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Registration Form</title>
+  <title>Modern Registration Form</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>Online Registration Form</h1>
+    <h1>Join Us!</h1>
+    <p>Fill in the details below to register.</p>
+
     <form id="registrationForm" method="POST" action="process.php">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
 
-      <label for="phone">Phone:</label>
-      <input type="text" id="phone" name="phone" required><br>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
 
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob" required><br>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
 
-      <label for="gender">Gender:</label>
-      <select id="gender" name="gender" required>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
-      </select><br>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
 
       <button type="submit">Submit</button>
     </form>
-
-    <div id="result"></div>
   </div>
+
+  <!-- Modal for displaying the result -->
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="assets/success-icon.png" alt="Success">
+      <h2>Registration Successful!</h2>
+      <div id="resultData"></div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
