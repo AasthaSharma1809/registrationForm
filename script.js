@@ -20,8 +20,13 @@ $(document).ready(function () {
     });
   });
 
-  // Close modal
-  $('.close').on('click', function () {
+  // Close modal when clicking on the "close" button or outside the modal
+  $('.close, .modal').on('click', function () {
     $('#successModal').fadeOut();
+  });
+
+  // Prevent modal content click from closing the modal
+  $('.modal-content').on('click', function (e) {
+    e.stopPropagation();
   });
 });
