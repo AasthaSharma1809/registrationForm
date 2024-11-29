@@ -1,20 +1,21 @@
 $(document).ready(function () {
   $('#registrationForm').on('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); // Prevent form from refreshing page
 
     $.ajax({
       url: 'process.php',
       type: 'POST',
       data: $(this).serialize(),
       success: function (response) {
-        if (response === 'success') {
-          $('#successModal').fadeIn(); // Show success modal
+        if (response.trim() === 'success') {
+          $('#successModal').fadeIn(); // Show modal
+          $('#registrationForm')[0].reset(); // Clear form
         } else {
-          alert('Error submitting form. Please fill all fields correctly.');
+          alert('Error submitting form. Please try again.');
         }
       },
       error: function () {
-        alert('Error submitting form. Please try again.');
+        alert('Error submitting form.');
       }
     });
   });
