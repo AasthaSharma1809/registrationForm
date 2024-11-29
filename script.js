@@ -8,8 +8,7 @@ $(document).ready(function () {
       data: $(this).serialize(),
       success: function (response) {
         if (response === 'success') {
-          $('#registrationForm').hide(); // Hide form after successful submission
-          $('#successMessage').removeClass('hidden').fadeIn(); // Show success message
+          $('#successModal').fadeIn(); // Show the modal on success
         } else {
           alert('Error submitting form. Please try again.');
         }
@@ -18,5 +17,10 @@ $(document).ready(function () {
         alert('Error submitting form. Please try again.');
       }
     });
+  });
+
+  // Close modal
+  $('.close').on('click', function () {
+    $('#successModal').fadeOut();
   });
 });
