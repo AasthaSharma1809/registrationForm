@@ -3,22 +3,20 @@ $(document).ready(function () {
     e.preventDefault(); // Prevent default form submission
 
     $.ajax({
-      url: 'process.php', // Backend script to handle form submission
+      url: 'process.php',
       type: 'POST',
-      data: $(this).serialize(), // Send form data
+      data: $(this).serialize(),
       success: function (response) {
-        // Show the success modal with the response data
-        $('#resultData').html(response);
-        $('#resultModal').fadeIn(); // Display the modal
+        if (response === 'success') {
+          $('#registrationForm').hide(); // Hide form after successful submission
+          $('#successMessage').removeClass('hidden').fadeIn(); // Show success message
+        } else {
+          alert('Error submitting form. Please try again.');
+        }
       },
       error: function () {
         alert('Error submitting form. Please try again.');
       }
     });
-  });
-
-  // Close the modal when the close button is clicked
-  $('.close').click(function () {
-    $('#resultModal').fadeOut();
   });
 });
