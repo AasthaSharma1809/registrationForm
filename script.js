@@ -10,6 +10,7 @@ $(document).ready(function () {
         if (response.trim() === 'success') {
           $('#successModal').fadeIn(); // Show modal
           $('#registrationForm')[0].reset(); // Clear form
+          $('.modal-content p').text('Thank you for registering. 😊 Your registration was successful!');
         } else {
           alert('Error submitting form. Please try again.');
         }
