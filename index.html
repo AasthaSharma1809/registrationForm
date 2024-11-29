@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stylish Registration Form</title>
+  <title>Fancy Registration Form</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Join Us!</h1>
+    <h1>✨ Join Us! ✨</h1>
     <p>Fill in the details below to register.</p>
 
     <form id="registrationForm">
@@ -45,11 +45,14 @@
 
       <button type="submit">Submit</button>
     </form>
+  </div>
 
-    <!-- Success message -->
-    <div id="successMessage" class="hidden">
-      <h2>Registration Successful!</h2>
-      <p>Thank you for registering. We will contact you soon!</p>
+  <!-- Modal for success message -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>🎉 Registration Successful! 🎉</h2>
+      <p>Thank you for registering! We'll contact you soon. 😊</p>
     </div>
   </div>
 
