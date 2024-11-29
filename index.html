@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fancy Registration Form</title>
+  <title>Pastel Registration Form</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>✨ Join Us! ✨</h1>
-    <p>Fill in the details below to register.</p>
+    <h1>🌸 Join Us! 🌸</h1>
+    <p>Fill in the details to register below.</p>
 
     <form id="registrationForm">
       <div class="form-group">
@@ -37,22 +37,23 @@
       <div class="form-group">
         <label for="gender">Gender</label>
         <select id="gender" name="gender" required>
+          <option value="">Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Other">Other</option>
         </select>
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Register</button>
     </form>
   </div>
 
   <!-- Modal for success message -->
-  <div id="successModal" class="modal">
+  <div id="successModal" class="modal hidden">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>🎉 Registration Successful! 🎉</h2>
-      <p>Thank you for registering! We'll contact you soon. 😊</p>
+      <p>Thank you for registering. We'll contact you soon! 😊</p>
     </div>
   </div>
 
