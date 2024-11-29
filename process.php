@@ -6,13 +6,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $dob = htmlspecialchars($_POST['dob']);
   $gender = htmlspecialchars($_POST['gender']);
 
-  // You can store this data in a database or use it as needed
-  // For now, we simply display it as a response
-
-  echo "<p><strong>Name:</strong> $name</p>";
-  echo "<p><strong>Email:</strong> $email</p>";
-  echo "<p><strong>Phone:</strong> $phone</p>";
-  echo "<p><strong>Date of Birth:</strong> $dob</p>";
-  echo "<p><strong>Gender:</strong> $gender</p>";
+  // Simulate successful form submission
+  if (!empty($name) && !empty($email) && !empty($phone) && !empty($dob) && !empty($gender)) {
+    echo 'success';
+  } else {
+    echo 'error';
+  }
 }
 ?>
