@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Registration Form</title>
+  <title>Stylish Registration Form</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <h1>Join Us!</h1>
     <p>Fill in the details below to register.</p>
 
-    <form id="registrationForm" method="POST">
+    <form id="registrationForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -44,44 +45,14 @@
 
       <button type="submit">Submit</button>
     </form>
-  </div>
 
-  <!-- Modal for displaying the result -->
-  <div id="resultModal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img src="assets/success-icon.png" alt="Success" style="width: 50px;">
+    <!-- Success message -->
+    <div id="successMessage" class="hidden">
       <h2>Registration Successful!</h2>
-      <div id="resultData"></div>
+      <p>Thank you for registering. We will contact you soon!</p>
     </div>
   </div>
 
-  <script>
-    $(document).ready(function () {
-      $('#registrationForm').on('submit', function (e) {
-        e.preventDefault(); // Prevent default form submission
-
-        $.ajax({
-          url: 'process.php', // Backend script to handle form submission
-          type: 'POST',
-          data: $(this).serialize(), // Send form data
-          success: function (response) {
-            // Show the success modal with the response data
-            $('#resultData').html(response);
-            $('#resultModal').fadeIn();
-          },
-          error: function () {
-            alert('Error submitting form. Please try again.');
-          }
-        });
-      });
-
-      // Close the modal when the close button is clicked
-      $('.close').click(function () {
-        $('#resultModal').fadeOut();
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
