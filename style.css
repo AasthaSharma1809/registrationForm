@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,24 +40,26 @@ form {
 
 label {
   font-weight: 500;
+  color: #555;
 }
 
 input, select {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
   margin-top: 5px;
   transition: 0.3s;
 }
 
 input:focus, select:focus {
-  border-color: #2575fc;
-  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+  border-color: #a6c1ee;
+  box-shadow: 0 0 8px rgba(166, 193, 238, 0.5);
 }
 
 button {
-  background: linear-gradient(to right, #2575fc, #6a11cb);
+  background: linear-gradient(to right, #a6c1ee, #fbc2eb);
   color: white;
   border: none;
   padding: 12px;
@@ -69,7 +71,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
 }
 
 .modal {
