@@ -8,9 +8,9 @@ $(document).ready(function () {
       data: $(this).serialize(),
       success: function (response) {
         if (response === 'success') {
-          $('#successModal').fadeIn(); // Show the modal on success
+          $('#successModal').fadeIn(); // Show success modal
         } else {
-          alert('Error submitting form. Please try again.');
+          alert('Error submitting form. Please fill all fields correctly.');
         }
       },
       error: function () {
