@@ -6,9 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $dob = htmlspecialchars($_POST['dob']);
   $gender = htmlspecialchars($_POST['gender']);
 
-  // Simulate successful form submission
   if (!empty($name) && !empty($email) && !empty($phone) && !empty($dob) && !empty($gender)) {
-    echo 'success';
+    echo 'success'; // Success response for AJAX
   } else {
     echo 'error';
   }
