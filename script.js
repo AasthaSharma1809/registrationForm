@@ -3,13 +3,13 @@ $(document).ready(function() {
         var name = $('#name').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
-        var address = $('#address').val();
+        var dob = $('#dob').val();
 
-        if (name && email && phone && address) {
+        if (name && email && phone && dob) {
             $('#resultName').text('Name: ' + name);
             $('#resultEmail').text('Email: ' + email);
             $('#resultPhone').text('Phone: ' + phone);
-            $('#resultAddress').text('Address: ' + address);
+            $('#resultDob').text('Date of Birth: ' + dob);
             $('#result').show();
         } else {
             alert('Please fill all fields.');
