@@ -1,33 +1,15 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Check if all required fields are received
-    if (isset($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['dob'])) {
-        
-        // Sanitize input data to prevent XSS attacks
-        $name = htmlspecialchars(trim($_POST['name']));
-        $email = htmlspecialchars(trim($_POST['email']));
-        $phone = htmlspecialchars(trim($_POST['phone']));
-        $dob = htmlspecialchars(trim($_POST['dob']));
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $dob = htmlspecialchars($_POST['dob']); // Changed from address to dob
 
-        // Prepare the data to be stored
-        $data = "Name: $name\nEmail: $email\nPhone: $phone\nDate of Birth: $dob\n\n";
-
-        // Append the data to a file
-        file_put_contents('submissions.txt', $data, FILE_APPEND);
-
-        // Display the received data in a styled way
-        echo "<div style='background: #ffe6f2; padding: 20px; border-radius: 10px; border: 2px solid #ff66cc; margin: 20px;'>";
-        echo "<h3>🎉 Registration Successful!</h3>";
-        echo "<p><strong>Name:</strong> $name</p>";
-        echo "<p><strong>Email:</strong> $email</p>";
-        echo "<p><strong>Phone:</strong> $phone</p>";
-        echo "<p><strong>Date of Birth:</strong> $dob</p>";
-        echo "</div>";
-    } else {
-        echo "<h3>❌ Missing Required Fields</h3>";
-    }
-} else {
-    echo "<h3>❌ Invalid Request Method</h3>";
-    echo "<p>This page only accepts POST requests.</p>";
+    echo "<h2>Form Submission</h2>";
+    echo "<p><strong>Name:</strong> $name</p>";
+    echo "<p><strong>Email:</strong> $email</p>";
+    echo "<p><strong>Phone:</strong> $phone</p>";
+    echo "<p><strong>Date of Birth:</strong> $dob</p>";
 }
 ?>
+*
