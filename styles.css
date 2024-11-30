@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
     color: #333;
 }
 
@@ -8,29 +8,31 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #5a5c69;
+    color: #4A90E2;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 form label {
     display: block;
-    margin-bottom: 8px;
-    color: #5a5c69;
+    margin-bottom: 10px;
+    color: #4A4A4A;
 }
 
 form input, form textarea, form select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #e8f0fe;
+    background-color: #f0f4f8;
     color: #333;
 }
 
@@ -39,22 +41,30 @@ form button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #6c5ce7;
+    background-color: #4A90E2;
     color: white;
     cursor: pointer;
     margin-right: 4%;
+    font-size: 16px;
 }
 
 form button:hover {
-    background-color: #5a4dbb;
+    background-color: #357ABD;
+}
+
+#result {
+    margin-top: 20px;
 }
 
 #result h2 {
-    color: #5a5c69;
+    color: #4A4A4A;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 #result p {
-    background-color: #e8f0fe;
+    background-color: #f0f4f8;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
