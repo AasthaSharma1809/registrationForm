@@ -1,33 +1,23 @@
-$(document).ready(function () {
-  $('#registrationForm').on('submit', function (e) {
-    e.preventDefault(); // Prevent form from refreshing page
+$(document).ready(function() {
+    $('#submitBtn').click(function() {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+        var address = $('#address').val();
 
-    $.ajax({
-      url: 'process.php',
-      type: 'POST',
-      data: $(this).serialize(),
-      success: function (response) {
-        if (response.trim() === 'success') {
-          $('#successModal').fadeIn(); // Show modal
-          $('#registrationForm')[0].reset(); // Clear form
-          $('.modal-content p').text('Thank you for registering. 😊 Your registration was successful!');
+        if (name && email && phone && address) {
+            $('#resultName').text('Name: ' + name);
+            $('#resultEmail').text('Email: ' + email);
+            $('#resultPhone').text('Phone: ' + phone);
+            $('#resultAddress').text('Address: ' + address);
+            $('#result').show();
         } else {
-          alert('Error submitting form. Please try again.');
+            alert('Please fill all fields.');
         }
-      },
-      error: function () {
-        alert('Error submitting form.');
-      }
     });
-  });
 
-  // Close modal when clicking on the "close" button or outside the modal
-  $('.close, .modal').on('click', function () {
-    $('#successModal').fadeOut();
-  });
-
-  // Prevent modal content click from closing the modal
-  $('.modal-content').on('click', function (e) {
-    e.stopPropagation();
-  });
+    $('#clearBtn').click(function() {
+        $('#registrationForm')[0].reset();
+        $('#result').hide();
+    });
 });
