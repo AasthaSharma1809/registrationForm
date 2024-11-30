@@ -1,0 +1,120 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Fancy Container with Gradient Border */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #84fab0, #8fd3f4);
+    z-index: -1;
+    opacity: 0.8;
+    filter: blur(15px);
+    border-radius: 15px;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Form Labels */
+form label {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #f7f7f7;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(63, 81, 181, 0.5);
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #185a9d, #43cea2);
+    transform: translateY(-5px);
+}
+
+/* Clear Button */
+#clearBtn {
+    background: linear-gradient(135deg, #ff6a6a, #d93434);
+}
+
+#clearBtn:hover {
+    background: linear-gradient(135deg, #d93434, #ff6a6a);
+}
+
+/* Result Box */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #444;
+    text-align: center;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
