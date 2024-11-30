@@ -1,6 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
     margin: 0;
     padding: 0;
     color: #333;
@@ -26,7 +26,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(60deg, #ff9a9e, #fad0c4, #84fab0, #8fd3f4);
+    background: linear-gradient(60deg, #81d4fa, #80deea, #4fc3f7, #64b5f6);
     z-index: -1;
     opacity: 0.7;
     filter: blur(20px);
@@ -36,10 +36,10 @@ body {
 /* Header */
 h1 {
     text-align: center;
-    color: #555;
+    color: #4f83cc;
     font-size: 2.2rem;
     margin-bottom: 25px;
-    background: linear-gradient(135deg, #42e695, #3bb2b8);
+    background: linear-gradient(135deg, #4fc3f7, #0288d1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -47,7 +47,7 @@ h1 {
 /* Form Labels */
 form label {
     font-size: 1.2rem;
-    color: #555;
+    color: #4f83cc;
     margin-bottom: 8px;
 }
 
@@ -58,7 +58,7 @@ form input, form textarea {
     margin-bottom: 20px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1.1rem;
@@ -68,18 +68,18 @@ form input, form textarea {
 form input:focus, form textarea:focus {
     outline: none;
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(63, 81, 181, 0.5), 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.5), 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover Effect */
 form input:hover, form textarea:hover {
-    background: linear-gradient(135deg, #e0e0e0, #d0d0d0);
+    background: linear-gradient(135deg, #bbdefb, #90caf9);
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1), 0 3px 7px rgba(0, 0, 0, 0.1);
 }
 
 /* Textbox Placeholder */
 form input::placeholder, form textarea::placeholder {
-    color: #999;
+    color: #90caf9;
     font-style: italic;
 }
 
@@ -87,7 +87,7 @@ form input::placeholder, form textarea::placeholder {
 button {
     padding: 14px 25px;
     margin-right: 12px;
-    background: linear-gradient(135deg, #42e695, #3bb2b8);
+    background: linear-gradient(135deg, #4fc3f7, #0288d1);
     color: white;
     font-weight: bold;
     border: none;
@@ -97,17 +97,17 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #3bb2b8, #42e695);
+    background: linear-gradient(135deg, #0288d1, #4fc3f7);
     transform: translateY(-4px);
 }
 
 /* Clear Button */
 #clearBtn {
-    background: linear-gradient(135deg, #ff6b6b, #d94848);
+    background: linear-gradient(135deg, #80deea, #4fc3f7);
 }
 
 #clearBtn:hover {
-    background: linear-gradient(135deg, #d94848, #ff6b6b);
+    background: linear-gradient(135deg, #4fc3f7, #80deea);
 }
 
 /* Result Box */
@@ -117,7 +117,7 @@ button:hover {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-    color: #555;
+    color: #4f83cc;
     text-align: center;
 }
 
